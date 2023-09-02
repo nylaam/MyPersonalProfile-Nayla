@@ -143,7 +143,7 @@ const dataProjects = [
     resourceLink: 'https://github.com/nylaam/NEFLORIST-NEXT-WEB.git',
   },
   {
-    thumbnail: 'AyoMasak.svg',
+    thumbnail: 'AyoMasak.png',
     title: 'UI Design',
     description:
       'Ayo Masak UI design is a visual and interactive element that allows users to explore and use Ayo Masak platform with ease. With an attractive and intuitive appearance, Ayo Masak UI design is designed to facilitate users in finding recipes and cooking food.',
