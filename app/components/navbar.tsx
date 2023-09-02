@@ -5,17 +5,16 @@ import React, { useEffect, useState } from 'react'
 import { dataNavbar } from '../utils/data'
 import { useThemeContext } from '../context/context'
 import { useInView } from 'react-intersection-observer'
-
-type NavbarData = {
+type Navbar = {
   title: string
   menuList: string[]
 }
 
-const navbarData: NavbarData = dataNavbar
+const navbar: Navbar = dataNavbar
 
-function NavigationBar() {
+function Navbar() {
   const { ref, inView } = useInView({
-    threshold: 0.2, // Ubah nilai ini sesuai kebutuhan Anda
+    threshold: 0.2, // Change this value as needed
     triggerOnce: true,
   })
   const [isSticky, setIsSticky] = useState<boolean>(false)
@@ -50,11 +49,11 @@ function NavigationBar() {
       >
         <div className='flex justify-between items-center px-4 sm:px-8 py-3'>
           <h1 className='text-2xl font-bold text-primary dark:text-dark-blue-2'>
-            {navbarData.title}
+            {navbar.title}
           </h1>
           {/* desktop navbar */}
           <ul className='hidden sm:flex gap-8 text-light-gray dark:text-dark-blue-2 list-none p-0 items-center dark:font-medium'>
-            {navbarData.menuList.map((item: string, i: number) => (
+            {navbar.menuList.map((item: string, i: number) => (
               <a
                 href={`#${item.toLowerCase()}`}
                 key={i}
@@ -129,7 +128,7 @@ function NavigationBar() {
               />
             </div>
             <ul className='flex h-[60%] flex-col justify-center gap-8 text-light-gray list-none p-0 items-center'>
-              {navbarData.menuList.map((item: string, i: number) => (
+              {navbar.menuList.map((item: string, i: number) => (
                 <a
                   href={`#${item.toLowerCase()}`}
                   key={i}
@@ -184,4 +183,4 @@ function NavigationBar() {
   )
 }
 
-export default NavigationBar
+export default Navbar
