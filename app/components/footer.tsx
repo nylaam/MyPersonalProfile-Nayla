@@ -3,7 +3,7 @@ import React from 'react'
 function Footer() {
   return (
     <a
-      href='https://github.com/nylaam/personal-portofolio'
+      href='https://github.com/nylaam/MyPersonalProfile-Nayla.git'
       target='_blank'
       className={`container flex flex-col justify-center items-center py-5 `}
     >
