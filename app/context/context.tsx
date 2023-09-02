@@ -1,20 +1,14 @@
-'use client'
+'use client' //untuk menunjukkan bahwa kode ini harus dijalankan di sisi klien. Ini baik.
 
-import React, { ReactNode, createContext, useContext, useState } from 'react'
+import React, { ReactNode, createContext, useContext, useState, useEffect } from 'react'
 
 type themeContextType = {
   isDark: boolean
   setIsDark: React.Dispatch<React.SetStateAction<boolean>>
 }
 
-let tempMode = false
-const mode = localStorage.getItem('mode')
-if (mode !== null) {
-  tempMode = JSON.parse(mode)
-}
-
 const ThemeContext = createContext<themeContextType>({
-  isDark: tempMode,
+  isDark: false, 
   setIsDark: () => {},
 })
 
@@ -23,7 +17,19 @@ type Props = {
 }
 
 export const ThemeContextProvider = ({ children }: Props) => {
-  const [isDark, setIsDark] = useState<boolean>(tempMode)
+  const [isDark, setIsDark] = useState<boolean>(false) //diubah sesuai dengan nilai default yang diinginkan.
+
+  // Menggunakan useEffect untuk mengambil dan menyimpan status tema di `localStorage`.
+  useEffect(() => {
+    const mode = localStorage.getItem('mode')
+    if (mode !== null) {
+      setIsDark(JSON.parse(mode))
+    }
+  }, []) 
+  // Menggunakan useEffect untuk menyimpan perubahan status tema ke `localStorage`.
+  useEffect(() => {
+    localStorage.setItem('mode', JSON.stringify(isDark))
+  }, [isDark]) // Efek ini akan berjalan setiap kali nilai `isDark` berubah.
 
   return (
     <ThemeContext.Provider value={{ isDark, setIsDark }}>
