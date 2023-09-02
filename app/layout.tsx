@@ -14,7 +14,7 @@ export const metadata = {
   description:
     'Welcome to my personal site! This is where you can learn more about me, my interests, and my work. Explore my portfolio, blog, and more to get a better sense of who I am and what I do.',
   keywords:
-    'personal, portfolio, blog, about me, interests, work, projects, skills, experience, education, achievements, contact, homepage',
+    'personal, portfolio, blog, about me, interests, projects, skills, experience, education, achievements, contact, homepage',
   author: 'Nayla',
   image: '/images/homepage.png',
   url: 'https://www.your-url.com',

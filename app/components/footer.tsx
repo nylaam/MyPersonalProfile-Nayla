@@ -10,16 +10,6 @@ function Footer() {
       <h5 className='font-bold text-sm text-light-gray dark:text-dark-blue'>
         Portfolio © 2023
       </h5>
-      {/* <h5 className='font-bold text-sm text-light-gray'>
-        Made by{' '}
-        <a
-          href='https://azarsite.netlify.app'
-          target='_blank'
-          className='text-primary'
-        >
-          M. Azar Nuzy
-        </a>
-      </h5> */}
     </a>
   )
 }
