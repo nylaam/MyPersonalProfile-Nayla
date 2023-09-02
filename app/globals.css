@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  @apply max-w-7xl mx-auto md:px-8 w-full sm:px-5 px-3 py-[15px];
+}
+
+.title {
+  @apply text-light-gray dark:text-dark-blue font-bold text-2xl sm:text-[30px];
+}
+
+.horizontal-line {
+  @apply w-[90%] bg-dark-gray dark:text-dark-blue h-[1px];
+}
+
+.active-experience {
+  @apply font-bold text-primary;
+}
+
+.mySwiper {
+  width: 90% !important;
+}
+
+.swiper {
+  position: unset !important;
+}
+
+.swiper-button-prev {
+  color: #ccd6f6 !important;
+  transform: translateY(32px);
+  border: 3px solid #ccd6f6;
+  height: 40px !important;
+  width: 35px !important;
+  border-radius: 100%;
+  padding-left: 6px;
+  left: 40px !important;
+}
+
+.swiper-button-prev::after {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 24px !important;
+  font-weight: bolder;
+}
+.swiper-button-next {
+  color: #ccd6f6 !important;
+  transform: translateY(32px);
+  border: 3px solid #ccd6f6;
+  height: 40px !important;
+  width: 35px !important;
+  right: 40px !important;
+  border-radius: 100%;
+  padding-left: 10px;
+}
+
+.swiper-button-next::after {
+  width: 24px !important;
+  height: 24px !important;
+  font-size: 24px !important;
+  font-weight: bolder;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .swiper {
+    padding: 0 20px !important;
+  }
+  .swiper-button-next {
+    right: 30px !important;
+  }
+
+  .swiper-button-prev {
+    left: 30px !important;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .swiper {
+    padding: 0 40px !important;
+  }
+  .swiper-button-next {
+    right: 20px !important;
+  }
+
+  .swiper-button-prev {
+    left: 20px !important;
+  }
+}
